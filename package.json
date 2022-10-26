@@ -4,11 +4,7 @@
   "description": "",
   "main": "server/app.js",
   "scripts": {
-    "front": "npm start --prefix client",
-    "back": "node server/app.js",
-    "dev_back": "nodemon server/app.js",
-    "start": "concurrently \"npm run back\" \"npm run front\"",
-    "dev": "concurrently \"npm run dev_back\" \"npm run front\"",
+    "start": "npm start --prefix client",
     "lint": "eslint src --fix",
     "prepare": "husky install"
   },

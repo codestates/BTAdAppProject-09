@@ -1,0 +1,137 @@
+.main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.main_section1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #193836;
+    padding: 60px 0 150px 0;
+}
+
+.main_sectionContent1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.main_sectionContent2 {
+    font-size: 60px;
+    font-weight: 400;
+    padding: 21px 0 33px;
+    color: #FFFFFF;
+}
+
+.main_sectionContent3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.main_stakingInfo {
+    width: 80%;
+    height: 116px;
+    padding: 32px 0;
+    box-shadow: 0 0 6px 0 rgb(0 0 0 / 15%);
+    border-radius: 12px;
+    text-align: center;
+    color: #000;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_stakingSection1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.main_stakingMaxInterest {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main_stakingInterestElement {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.main_stakingAgreeBtn {
+    min-width: 120px;
+    border-color: #6ebeb4;
+    background: #6ebeb4;
+    height: 48px;
+    padding: 0 16px;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 28px;
+}
+
+.main_productTextContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 130px 0 50px 0;
+}
+
+.main_productTextTitle {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: .24px;
+    line-height: 48px;
+    padding-left: 20%;
+    display: flex;
+    justify-content: start;
+}
+
+.main_productViewMoreContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.main_productViewMoreText {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #bbb;
+    line-height: 20px;
+}
+
+.main_productViewBtn {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #000000;
+    line-height: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main_productList {
+    padding-bottom: 300px;
+}

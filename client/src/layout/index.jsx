@@ -1,13 +1,13 @@
 import React from "react";
-
 import { Outlet } from "react-router-dom";
+import Topbar from "../components/topbar";
 
 const MainLayout = () => {
   return (
-    <div>
-      기본 레이아웃
+    <>
+      <Topbar />
       <Outlet />
-    </div>
+    </>
   );
 };
 

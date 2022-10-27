@@ -1,15 +1,17 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 # dependencies
 node_modules
-/.idea
-/.pnp
+.idea
+.pnp
 .pnp.js
 
 # testing
-/coverage
+coverage
 
 # production
 build
+client/src/contracts
+client/*/src/contracts
 
 # misc
 .DS_Store
@@ -19,3 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 .env
 wallet.json
+.vscode

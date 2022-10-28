@@ -2,7 +2,7 @@ import React from "react";
 import "./card.css";
 import Product from "./product";
 
-const Card = ({ title, text }) => {
+const Card = ({ title, text, contract }) => {
   return (
     <>
       <div className="main_productTextContainer">

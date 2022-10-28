@@ -1,8 +1,40 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import Web3 from "web3";
 import "./Main.css";
 import Card from "../components/card";
 
 const Main = () => {
+  const [contract, setContract] = useState();
+
+  const init = useCallback(async artifact => {
+    if (artifact) {
+      const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+      const networkID = await web3.eth.net.getId();
+      const { abi } = artifact;
+      let address, contract;
+      try {
+        address = artifact.networks[networkID].address;
+        contract = new web3.eth.Contract(abi, address);
+        setContract(contract);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const tryInit = async () => {
+      try {
+        const artifact = require("../../contracts/contract.json");
+        init(artifact);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    tryInit();
+  }, [init]);
+
   return (
     <div className="main_container">
       <div className="main_section1">
@@ -34,9 +66,14 @@ const Main = () => {
         <Card
           title="스테이킹 가능한 상품"
           text="스테이킹 서비스 진행중인 가상자산 상품입니다."
+          contract={contract}
         />
         <hr />
-        <Card title="나의 스테이킹 상품" text="나의 가상자산 상품입니다." />
+        <Card
+          title="나의 스테이킹 상품"
+          text="나의 가상자산 상품입니다."
+          contract={contract}
+        />
       </div>
     </div>
   );

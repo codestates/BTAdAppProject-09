@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./product.css";
+import {
+  TextField,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Button,
+} from "@mui/material";
+import FloatingActionButtonZoom from "./TabPanel";
 
 const Product = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="product_container">
       <div className="product_title">
@@ -17,8 +37,13 @@ const Product = () => {
       </div>
       <div className="product_transactionBtnContainer">
         <div className="product_depositBtn">입금</div>
-        <div className="product_buyBtn">매수</div>
+        <div className="product_buyBtn" onClick={handleClickOpen}>
+          매수
+        </div>
       </div>
+      <Dialog open={open} onClose={handleClose}>
+        <FloatingActionButtonZoom handleClose={handleClose} />
+      </Dialog>
     </div>
   );
 };

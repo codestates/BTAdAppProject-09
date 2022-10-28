@@ -1,46 +1,57 @@
 .product_container {
-    display: flex;
-    flex-direction: column;
-    width: 316px;
-    height: 364px;
-    padding: 23px;
-    border: 1px solid #a0a0a0;
-    box-sizing: border-box;
-    border-radius: 8px;
-    background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 316px;
+  height: 364px;
+  padding-left: 23px;
+  border: 1px solid #a0a0a0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #fff;
 }
 
 .product_title {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+}
+
+.product_description {
+  margin-bottom: 20px;
+}
+
+.product_description h2,
+.product_description h5 {
+  margin: 10px 0;
 }
 
 .product_transactionBtnContainer {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .product_depositBtn {
-    height: 48px;
-    padding: 0 16px;
-    line-height: 48px;
-    font-size: 16px;
-    font-weight: 400;
-    min-width: 100px;
-    border-color: #6ebeb4;
-    background: #6ebeb4;
-    margin-right: 10px;
-    color: #fff;
+  text-align: center;
+  height: 48px;
+  padding: 0 16px;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 100px;
+  border-color: #6ebeb4;
+  background: #6ebeb4;
+  margin-right: 10px;
+  color: #fff;
 }
 
 .product_buyBtn {
-    height: 48px;
-    padding: 0 16px;
-    line-height: 48px;
-    font-size: 16px;
-    font-weight: 400;
-    min-width: 100px;
-    border-color: #3c3c3c;
-    background: #3c3c3c;
-    color: #fff;
+  text-align: center;
+  height: 48px;
+  padding: 0 16px;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 100px;
+  border-color: #3c3c3c;
+  background: #3c3c3c;
+  color: #fff;
 }

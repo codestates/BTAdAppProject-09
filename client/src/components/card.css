@@ -1,0 +1,42 @@
+.main_productTextContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 120px 50px 50px 30px;
+}
+
+.main_productTextTitle {
+  font-size: 32px;
+  font-weight: 1000;
+  letter-spacing: 0.24px;
+  line-height: 48px;
+  display: flex;
+  justify-content: start;
+}
+
+.main_productViewMoreContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.main_productViewMoreText {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #bbb;
+  line-height: 20px;
+}
+
+.main_productViewBtn {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #000000;
+  line-height: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main_productList {
+  padding-top: 15px;
+  padding-bottom: 100px;
+}

@@ -2,38 +2,23 @@ import React, { useCallback, useEffect, useState } from "react";
 import Web3 from "web3";
 import "./Main.css";
 import Card from "../components/card";
+import stakingContract from "../contracts/stakingContract.json";
 
 const Main = () => {
   const [contract, setContract] = useState();
 
-  const init = useCallback(async artifact => {
-    if (artifact) {
-      const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-      const networkID = await web3.eth.net.getId();
-      const { abi } = artifact;
-      let address, contract;
-      try {
-        address = artifact.networks[networkID].address;
-        contract = new web3.eth.Contract(abi, address);
-        setContract(contract);
-      } catch (err) {
-        console.error(err);
-      }
+  useEffect(() => {
+    let web3 = new Web3(window.ethereum);
+    const { abi } = stakingContract;
+    let address, contract;
+    try {
+      address = stakingContract.address;
+      contract = new web3.eth.Contract(abi, address);
+      setContract(contract);
+    } catch (err) {
+      console.error(err);
     }
   }, []);
-
-  useEffect(() => {
-    const tryInit = async () => {
-      try {
-        const artifact = require("../../contracts/contract.json");
-        init(artifact);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    tryInit();
-  }, [init]);
 
   return (
     <div className="main_container">

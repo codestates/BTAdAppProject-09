@@ -10,7 +10,7 @@ coverage
 
 # production
 build
-client/src/contracts
+client/src/contracts/*json
 client/*/src/contracts
 
 # misc

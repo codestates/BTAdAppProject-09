@@ -13,6 +13,11 @@
 .product_title {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+.product_setting {
+  margin: 18px;
 }
 
 .product_description {

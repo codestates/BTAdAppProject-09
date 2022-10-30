@@ -12,7 +12,7 @@ const Card = ({ title, text, contract }) => {
           <div className="main_productViewBtn">더보기 +</div>
         </div>
         <div className="main_productList">
-          <Product />
+          <Product contract={contract} />
         </div>
       </div>
     </>

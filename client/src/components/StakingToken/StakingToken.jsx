@@ -1,8 +1,7 @@
 import React from "react";
-import "./card.css";
-import Product from "./product";
+import StakingProduct from "./StakingProduct";
 
-const Card = ({ title, text }) => {
+const StakingToken = ({ title, text }) => {
   return (
     <>
       <div className="main_productTextContainer">
@@ -12,11 +11,11 @@ const Card = ({ title, text }) => {
           <div className="main_productViewBtn">더보기 +</div>
         </div>
         <div className="main_productList">
-          <Product />
+          <StakingProduct />
         </div>
       </div>
     </>
   );
 };
 
-export default Card;
+export default StakingToken;

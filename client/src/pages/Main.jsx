@@ -1,24 +1,11 @@
-import React, { useCallback, useEffect, useState } from "react";
-import Web3 from "web3";
+import React from "react";
+import { useWeb3React } from "@web3-react/core";
 import "./Main.css";
 import Card from "../components/card";
-import stakingContract from "../contracts/stakingContract.json";
+import StakingToken from "../components/StakingToken/StakingToken";
 
 const Main = () => {
-  const [contract, setContract] = useState();
-
-  useEffect(() => {
-    let web3 = new Web3(window.ethereum);
-    const { abi } = stakingContract;
-    let address, contract;
-    try {
-      address = stakingContract.address;
-      contract = new web3.eth.Contract(abi, address);
-      setContract(contract);
-    } catch (err) {
-      console.error(err);
-    }
-  }, []);
+  const { account, active } = useWeb3React();
 
   return (
     <div className="main_container">
@@ -51,14 +38,17 @@ const Main = () => {
         <Card
           title="스테이킹 가능한 상품"
           text="스테이킹 서비스 진행중인 가상자산 상품입니다."
-          contract={contract}
         />
-        <hr />
-        <Card
-          title="나의 스테이킹 상품"
-          text="나의 가상자산 상품입니다."
-          contract={contract}
-        />
+        {active && (
+          <>
+            <hr />
+
+            <StakingToken
+              title="스테이킹 토큰"
+              text="스테이킹할 수 있는 가상자산입니다."
+            />
+          </>
+        )}
       </div>
     </div>
   );

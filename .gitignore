@@ -22,3 +22,12 @@ yarn-error.log*
 .env
 wallet.json
 .vscode
+
+#Hardhat files
+cache
+artifacts
+
+coverage
+coverage.json
+typechain
+typechain-types
